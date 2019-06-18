@@ -6,7 +6,7 @@ import {
   CardBody,
   CardTitle,
   Breadcrumb,
-  BreadcrumbItem, Button
+  BreadcrumbItem
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -66,7 +66,6 @@ const DishDetailComponent = props => (
     <div className="row">
       <RenderDish dish={props.dish} />
       <RenderComments comments={props.comments} />
-      <Button>{props.dish.id + 5}</Button>
 >    </div>
   </div>
 );

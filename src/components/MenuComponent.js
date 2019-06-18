@@ -5,7 +5,7 @@ import {
   CardImgOverlay,
   CardTitle,
   Breadcrumb,
-  BreadcrumbItem, Button
+  BreadcrumbItem
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,6 @@ function RenderMenuItem({ dish, onClick }) {
         <CardImgOverlay>
           <CardTitle>{dish.name}</CardTitle>
         </CardImgOverlay>
-        <Button>{dish.id}</Button>
       </Link>
     </Card>
   );
