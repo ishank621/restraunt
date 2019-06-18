@@ -6,7 +6,7 @@ import {
   CardBody,
   CardTitle,
   Breadcrumb,
-  BreadcrumbItem
+  BreadcrumbItem, Button
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -47,6 +47,8 @@ function RenderComments({ comments }) {
   } else return <div />;
 }
 
+
+
 const DishDetailComponent = props => (
   <div className="container">
     <div className="row">
@@ -64,7 +66,8 @@ const DishDetailComponent = props => (
     <div className="row">
       <RenderDish dish={props.dish} />
       <RenderComments comments={props.comments} />
-    </div>
+      <Button>{props.dish.id + 5}</Button>
+>    </div>
   </div>
 );
 
