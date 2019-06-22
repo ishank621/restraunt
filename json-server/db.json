@@ -209,6 +209,13 @@
       "comment": "Ishank",
       "date": "2019-06-22T12:23:29.732Z",
       "id": 20
+    },
+    {
+      "dishId": 0,
+      "author": "dsasdas",
+      "comment": "sadsd",
+      "date": "2019-06-22T13:35:00.071Z",
+      "id": 21
     }
   ],
   "promotions": [
@@ -271,6 +278,28 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "date": "2019-06-22T13:35:38.703Z",
+      "firstname": "sdsdsd",
+      "lastname": "sdsdsd",
+      "telnum": "32434343",
+      "email": "wdada@fdfd.co",
+      "agree": true,
+      "contactType": "Tel.",
+      "message": "ascada",
+      "id": 2
+    },
+    {
+      "date": "2019-06-22T13:35:46.537Z",
+      "firstname": "",
+      "lastname": "",
+      "telnum": "",
+      "email": "",
+      "agree": false,
+      "contactType": "Tel.",
+      "message": "",
+      "id": 3
     }
   ]
 }
