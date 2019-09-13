@@ -13,6 +13,7 @@ var users = require("./routes/users");
 var dishRouter = require("./routes/dishRouter");
 var promoRouter = require("./routes/promoRouter");
 var leaderRouter = require("./routes/leaderRouter");
+var config = require("./config");
 
 const mongoose = require("mongoose");
 mongoose.Promise = require("bluebird");
@@ -20,7 +21,7 @@ mongoose.Promise = require("bluebird");
 const Dishes = require("./models/dishes");
 
 // Connection URL
-const url = "mongodb://localhost:27017/restraunt";
+const url = config.mongoUrl;
 const connect = mongoose.connect(url, {
   useMongoClient: true
   /* other options */
@@ -48,35 +49,35 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser("12345-67890-09876-54321"));
 
-app.use(
-  session({
-    name: "session-id",
-    secret: "12345-67890-09876-54321",
-    saveUninitialized: false,
-    resave: false,
-    store: new FileStore()
-  })
-);
+// app.use(
+//   session({
+//     name: "session-id",
+//     secret: "12345-67890-09876-54321",
+//     saveUninitialized: false,
+//     resave: false,
+//     store: new FileStore()
+//   })
+// );
 
 app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.session());
 
 app.use("/", index);
 app.use("/users", users);
 
-function auth(req, res, next) {
-  console.log(req.session);
+// function auth(req, res, next) {
+//   console.log(req.session);
 
-  if (!req.user) {
-    var err = new Error("You are not authenticated!");
-    err.status = 401;
-    return next(err);
-  } else {
-    next();
-  }
-}
+//   if (!req.user) {
+//     var err = new Error("You are not authenticated!");
+//     err.status = 401;
+//     return next(err);
+//   } else {
+//     next();
+//   }
+// }
 
-app.use(auth);
+// app.use(auth);
 
 app.use(express.static(path.join(__dirname, "public")));
 
