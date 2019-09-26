@@ -6,7 +6,14 @@ npm install passport@0.4.0 passport-local@1.0.0 passport-local-mongoose@5.0.1 --
 npm install passport-jwt@4.0.0 jsonwebtoken@8.3.0 --save
 npm install multer@1.3.1 --save
 npm install cors@2.8.4 --save
+npm install passport-facebook-token@3.3.0 --save
 
+->facebook authorization types: 
+1.bearer is Bearer in case of facebook token(in case of Authorization)
+2.access_token can also be used without using Bearer
+3.paste ?access_token=value in query paramter
+
+after applying cors we always have to specify origin: https://localhost:3443, in case of browsers it happens by itself
 
 to authenticate using https
 1. cd bin (inside restraunt server)
